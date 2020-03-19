@@ -1,0 +1,28 @@
+.contact-item{
+    width: 250px;
+    padding: 15px;
+    float: left;
+}
+.contact-item img{
+    width: 100%;
+}
+.star{
+    color: blue;
+    margin: 15px;
+    cursor: pointer;
+
+}
+.trash{
+    color: darkred;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+li{
+    border: 2px solid black;
+    margin-left: 3%;
+}
+li h2{
+    width: 95%;
+    overflow-x: auto;
+}
