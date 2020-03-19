@@ -7,8 +7,9 @@
     width: 100%;
 }
 .star{
-    color: blue;
+    color: yellowgreen;
     margin: 15px;
+    margin-top: 20px !important;
     cursor: pointer;
 
 }
@@ -25,4 +26,14 @@ li{
 li h2{
     width: 95%;
     overflow-x: auto;
+}
+.buttonChange{
+    background-color: darkolivegreen;
+    width: 100%;
+}
+.iconsDiv{
+  
+    margin-left: 23%;
+  
+
 }

@@ -7,7 +7,9 @@ class ContactAdd extends Component {
         email: null,
         phone: null,
         address: null,
-        avatar: null
+        avatar: null,
+        gender: null,
+        isFavourite: false
     }
 
     getName = (event) => {
@@ -54,42 +56,83 @@ class ContactAdd extends Component {
                             avatar: event.target.value
 
                         });
+                    }
+                    getMale = (event) => {
+
+                       
+                        this.setState({
+
+                            gender: "men"
+
+                        });
+
+                    }
+                    getFemale = (event) => {
+
+                       
+                        this.setState({
+
+                            gender: "women"
+
+                        });
+
+                    }
+                    getIsFavourite = (event) => {
+
+                       
+                        this.setState({
+
+                            isFavourite: !this.state.isFavourite
+
+                        });
 
                     }
 
 
                     sendData = (event) =>{
                         event.preventDefault();
-                        const {name,email,phone,address,avatar} = this.state;
-                        this.props.addContact(name,email,phone,address,avatar);
+                        const {name,email,phone,address,avatar,gender,isFavourite} = this.state;
+                        this.props.addContact(name,email,phone,address,avatar,gender,isFavourite);
                     }
 
                     render(){
 
                         return (
                             <Fragment>
-                                <form onSubmit={this.sendData}>
+                                <form className="allPoles" onSubmit={this.sendData}>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Name contact</label>
-                                        <input type="text" onChange={this.getName} class="form-control" placeholder="Enter name"></input>
+                                        <input type="text" onChange={this.getName} class="form-control poleInput" placeholder="Enter name"></input>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Address contact</label>
-                                        <input type="text" onChange={this.getAddress} class="form-control" placeholder="Enter address"></input>
+                                        <input type="text" onChange={this.getAddress} class="form-control poleInput" placeholder="Enter address"></input>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Phone contact</label>
-                                        <input type="text" onChange={this.getPhone} class="form-control" placeholder="Enter phone"></input>
+                                        <input type="text" onChange={this.getPhone} class="form-control poleInput" placeholder="Enter phone"></input>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email contact</label>
-                                        <input type="email" onChange={this.getEmail} class="form-control" placeholder="Enter email"></input>
+                                        <input type="email" onChange={this.getEmail} class="form-control poleInput" placeholder="Enter email"></input>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Select number avatar</label>
-                                        <input type="number" onChange={this.getAvatar} min="1" max="99" class="form-control" placeholder="Select number avatar"></input>
+                                        <input type="number" onChange={this.getAvatar} min="1" max="99" class="form-control poleInput" placeholder="Select number avatar"></input>
                                     </div>
 
+                                  
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Men</label>
+                                        <input type="radio" name="radioGender" onChange={this.getMale} class="form-control poleInput" placeholder="Enter gender"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Women</label>
+                                        <input type="radio" name="radioGender" onChange={this.getFemale} class="form-control poleInput" placeholder="Enter gender"></input>
+                                    </div>
+                                   
+
+                                   
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </Fragment>

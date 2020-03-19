@@ -10,7 +10,7 @@ render() {
           
               
           <main>
-              <h1>НЕ НА ТОГО ТЫ ПОПАЛ!</h1>
+              <h1>ERROR#404!</h1>
               <img className="photo" src="https://content.freelancehunt.com/profile/photo/225/Andriy236316.png"></img>
           </main>  
         </Fragment>

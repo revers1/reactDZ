@@ -53,12 +53,12 @@ if(this.props.isFavourite===true){
                     <h2>{this.state.email}</h2>
                     <p>{this.state.phone}</p>
                     <p>{this.state.email}</p>
-                    <button className="btn btn-info" onClick={this.randomPhotos.bind(this)}>CHANGE PHOTO</button>
-                   
+                    <button className="btn btn-info buttonChange" onClick={this.randomPhotos.bind(this)}>CHANGE PHOTO</button>
+                   <span className="iconsDiv">
                        <i onClick={this.props.setFavourite} className={starStyle}></i>
 
                        <i onClick={this.props.deleteC} className="fa fa-trash-o fa-2x trash"></i>
-                   
+                     </span>
                 </li>
             </Fragment>
         )

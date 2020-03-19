@@ -27,7 +27,7 @@ class App extends Component {
                 email: "roma.pro@gmail.com",
                 gender: "men",
                 avatar: 33,
-                isFavourite: false
+                isFavourite: true
             },
             {
                 id: uuid(),
@@ -35,7 +35,7 @@ class App extends Component {
                 phone: "000009",
                 email: "oks.pro@gmail.com",
                 gender: "women",
-                avatar: 33,
+                avatar: 30,
                 isFavourite: false
             }
         ]
@@ -67,7 +67,7 @@ class App extends Component {
 
 
 
-    addContact = (name, email, phone, address, avatar) => {
+    addContact = (name, email, phone, address, avatar, gender, isFavourite) => {
 
         const newContact = {
             id: uuid(),
@@ -76,8 +76,8 @@ class App extends Component {
             email: email,
             phone: phone,
             avatar: avatar,
-            gender: "men",
-            isFavourite: false
+            gender: gender,
+            isFavourite: isFavourite
         }
 
         this.setState(state => {
@@ -100,8 +100,7 @@ class App extends Component {
                                 <div class="navbar-header">
                                     <Link class="navbar-brand" to="/">Contact book</Link>
                                 </div>
-
-                                <ul class="nav navbar-nav">
+                                <ul class="nav navbar-nav ">
                                     <li><Link to="/">List contacts</Link></li>
                                     <li><Link to="/addContact">Add contact</Link></li>
                                 </ul>
