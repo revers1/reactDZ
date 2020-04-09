@@ -2,8 +2,14 @@ import React, { Fragment } from "react";
 import "./ContactList.css";
 import ContactItem from "../ContactItem/ContactItem";
 
-const ContactList = ({ Data,setFavourite, deleteContact }) => {
-    const singleContact = Data.map(item => {
+const ContactList = ({ Data,setFavourite, deleteContact, editContact }) => {
+    
+
+
+
+    var singleContact = [];
+    if(Data!=null){
+    singleContact= Data.map(item => {
 
         return (
             <ContactItem
@@ -16,10 +22,13 @@ const ContactList = ({ Data,setFavourite, deleteContact }) => {
                 isFavourite={item.isFavourite}
                 setFavourite={()=>setFavourite(item.id)}
                 deleteC={()=>deleteContact(item.id)}
+                editContact={()=>editContact(item.id)}
+              
             ></ContactItem>
         );
-
-    });
+        });
+    }
+    
 
     return (
         <Fragment>

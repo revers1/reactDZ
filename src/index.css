@@ -26,3 +26,31 @@ nav{
 ul{
   list-style-type: none;
 }
+.ulNav{
+  width: 25%;
+ 
+}
+ .inputSearch{
+  margin-top: 50px;
+  width: 20%;
+  margin-left: 70%;
+
+}
+.liMenu{
+  margin-left: 45%;
+}
+
+
+.search{
+  float: left;
+ 
+}
+.inputS{
+  margin-right: 15px;
+  margin-left: 155px;
+  width: 45%;
+float: left;
+} 
+.divSearch{
+  margin-top: 55px;
+}

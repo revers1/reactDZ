@@ -18,14 +18,21 @@
     margin-left: 10px;
     cursor: pointer;
 }
+.edit{
+    color: green;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
 
 li{
-    border: 2px solid black;
+   
     margin-left: 3%;
 }
-li h2{
+li h3{
     width: 95%;
-    overflow-x: auto;
+    overflow-x: hidden;
+    height: 55px;
 }
 .buttonChange{
     background-color: darkolivegreen;
@@ -35,5 +42,8 @@ li h2{
   
     margin-left: 23%;
   
-
+}
+.contacts{
+    border: 2px solid white;
+    background-color: rgb(27, 27, 27);
 }

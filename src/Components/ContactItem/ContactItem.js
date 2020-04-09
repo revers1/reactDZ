@@ -1,6 +1,8 @@
 import React, { Fragment, Component } from "react";
 import "./ContactItem.css";
 import { Math } from "core-js";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+
 
 
 class ContactItem extends Component {
@@ -50,14 +52,17 @@ if(this.props.isFavourite===true){
                 
                 <li className="contact-item contacts">
                     <img src= {URL} alt="contact image"></img>
-                    <h2>{this.state.email}</h2>
+                    <h3>{this.state.name}</h3>
                     <p>{this.state.phone}</p>
                     <p>{this.state.email}</p>
                     <button className="btn btn-info buttonChange" onClick={this.randomPhotos.bind(this)}>CHANGE PHOTO</button>
                    <span className="iconsDiv">
                        <i onClick={this.props.setFavourite} className={starStyle}></i>
-
                        <i onClick={this.props.deleteC} className="fa fa-trash-o fa-2x trash"></i>
+                        <Link
+                            to="/editContact">
+                            <i onClick={this.props.editContact} className="fa fa-pencil fa-2x edit"></i>
+                        </Link>
                      </span>
                 </li>
             </Fragment>
